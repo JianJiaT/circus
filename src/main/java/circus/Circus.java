@@ -66,6 +66,7 @@ public class Circus {
         Cage<Duck> duckCage = new Cage<>();
         Duck duck = new Duck("Donald");
         duckCage.lockUp(duck);
+
         Parrot parrot = new Parrot("Bob");
         Cage<Parrot> parrotCage = new Cage<>();
         parrotCage.lockUp(parrot);
@@ -73,6 +74,11 @@ public class Circus {
         ArrayList<Cage> cages = new ArrayList<>();
         cages.add(duckCage);
         cages.add(parrotCage);
+
+        Elephant eli = new Elephant("Eli");
+        Cage<Elephant> elephantCage = new Cage<>();
+        elephantCage.lockUp(eli);
+        cages.add(elephantCage);
 
         for(Cage c: cages) {
             c.release();
